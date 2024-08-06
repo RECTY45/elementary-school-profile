@@ -17,8 +17,20 @@ class UserTableSeeder extends Seeder
     {
         $users = [
             [
-                'username' => 'Bintang Admin',
+                'username' => 'Akbar Admin',
                 'email' => 'akbar@gmail.com',
+                'email_verified_at' => now(),
+                'password' => bcrypt('12345678'),
+            ],
+            [
+                'username' => 'Bintang Admin',
+                'email' => 'muhbintang650@gmail.com',
+                'email_verified_at' => now(),
+                'password' => bcrypt('12345678'),
+            ],
+            [
+                'username' => 'Fery Admin',
+                'email' => 'faryfadulrahman@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt('12345678'),
             ],
