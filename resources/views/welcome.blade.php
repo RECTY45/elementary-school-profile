@@ -47,7 +47,9 @@
                 @foreach($ekskul as $data)
                 <div class="col-lg-4 col-md-6 course-item">
                     <div class="course-thumb">
-                        <img src="{{ asset('storage/' . $data->image) }}" alt>
+                        @isset($data->image)
+                         <img src="{{ asset('storage/' . $data->image) }}" alt>
+                        @endisset
                         <div class="course-cat">
                             <span>DETAIL</span>
                         </div>
@@ -140,9 +142,11 @@
                 <a class="img-popup" href="{{ asset('frontend/img/ryoogen/school.jpg') }}"><i class="ti-plus"></i></a>
             </div>
             @foreach($gallery as $data)
-            <div class="gallery-item set-bg" data-setbg="{{ asset('storage/' . $data->image) }}">
-                <a class="img-popup" href="{{ asset('storage/' . $data->image) }}"><i class="ti-plus"></i></a>
-            </div>
+                @isset($data->image)
+                <div class="gallery-item set-bg" data-setbg="{{ asset('storage/' . $data->image) }}">
+                    <a class="img-popup" href="{{ asset('storage/' . $data->image) }}"><i class="ti-plus"></i></a>
+                </div>
+                @endisset
             @endforeach
         </div>
     </div>

@@ -9,18 +9,20 @@
             </div>
             <div class="row">
                 @foreach($news as $data)
-                <div class="col-lg-4 col-md-6 course-item">
-                    <div class="course-thumb">
-                        <img src="{{ asset('storage/' . $data->image) }}" alt>
-                        <div class="course-cat">
-                            <span>DETAIL</span>
+                    @if($data->image)
+                        <div class="col-lg-4 col-md-6 course-item">
+                            <div class="course-thumb">
+                                <img src="{{ asset('storage/' . $data->image) }}" alt>
+                                <div class="course-cat">
+                                    <span>DETAIL</span>
+                                </div>
+                            </div>
+                            <div class="course-info">
+                                <h4>{{ $data->title }}</h4>
+                                <p>{{ $data->description }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="course-info">
-                        <h4>{{ $data->title }}</h4>
-                        <p>{{ $data->description }}</p>
-                    </div>
-                </div>
+                    @endif
                 @endforeach
             </div>
         </div>
