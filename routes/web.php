@@ -59,7 +59,7 @@ Route::middleware('auth')->group(function(){
         Route::delete('/{id}', 'destroy')->name('delete');
     });
 
-    Route::prefix('/kontak')->name('contact.')->controller(ContactController::class)->group(function(){
+    Route::prefix('/daftar-kontak')->name('contact.')->controller(ContactController::class)->group(function(){
         Route::get('/', 'index')->name('index');
         Route::post('/', 'store')->name('store');
     });
@@ -76,7 +76,7 @@ Route::middleware('guest')->group(function(){
     Route::post('/login', [AuthenticationController::class, 'login'])->name('login');
 
     Route::get('/', [LandingPageController::class, 'index'])->name('home.frontend');
-    Route::get('/berita', [LandingPageController::class, 'newsPage'])->name('news.frontend');
+    Route::get('/berita-sekolah', [LandingPageController::class, 'newsPage'])->name('news.frontend');
     Route::get('/kontak', [LandingPageController::class, 'contactPage'])->name('contact.frontend');
     Route::get('/ekstrakulikuler', [LandingPageController::class, 'ekstrakulikulerPage'])->name('ekstrakulikuler.frontend');
     Route::get('/tentang-kami', [LandingPageController::class, 'aboutPage'])->name('about.frontend');

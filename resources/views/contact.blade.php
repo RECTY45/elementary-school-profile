@@ -15,15 +15,15 @@
                     <div style="margin-left: 30px" class="col-6 text-left">
                         <div class="mt-3">
                             <h3>Alamat</h3>
-                            <p>{{ $contact->address }}</p>
+                            <p>{{ $contact->address ?? '-' }}</p>
                         </div>
                         <div class="mt-3">
                             <h3>Nomor Ponsel</h3>
-                            <p>{{ $contact->phone }}</p>
+                            <p>{{ $contact->phone ?? '-' }}</p>
                         </div>
                         <div class="mt-3">
                             <h3>Email Sekolah</h3>
-                            <p>{{ $contact->phone }}</p>
+                            <p>{{ $contact->phone ?? '-' }}</p>
                         </div>
                     </div>
                 </div>

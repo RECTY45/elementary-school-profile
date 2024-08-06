@@ -29,8 +29,8 @@
                         <i class="fa fa-map-marker"></i>
                     </div>
                     <div class="counter-content">
-                        <h2>{{ $school_detail->name_school }}</h2>
-                        <p><i class="fa fa-calendar-o"></i>{{ $school_detail->address }}</p>
+                        <h2>{{ $school_detail->name_school ?? '-' }}</h2>
+                        <p><i class="fa fa-calendar-o"></i>{{ $school_detail->address ?? '-' }}</p>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                         <i class="ti-crown"></i>
                     </div>
                     <div class="fact-text">
-                        <h2>{{ $school_detail->total_teacher }}</h2>
+                        <h2>{{ $school_detail->total_teacher ?? '-'}}</h2>
                         <p>PENGAJAR</p>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                         <i class="ti-briefcase"></i>
                     </div>
                     <div class="fact-text">
-                        <h2>{{ $school_detail->total_staff }}</h2>
+                        <h2>{{ $school_detail->total_staff ?? '-'}}</h2>
                         <p>STAFF</p>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                         <i class="ti-user"></i>
                     </div>
                     <div class="fact-text">
-                        <h2>{{ $school_detail->total_student }}</h2>
+                        <h2>{{ $school_detail->total_student ?? '-' }}</h2>
                         <p>MURID</p>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                         <i class="ti-pencil-alt"></i>
                     </div>
                     <div class="fact-text">
-                        <h2>{{ $school_detail->total_alumni }}</h2>
+                        <h2>{{ $school_detail->total_alumni ?? '-' }}</h2>
                         <p>ALUMNI</p>
                     </div>
                 </div>

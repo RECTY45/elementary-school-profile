@@ -10,12 +10,12 @@
         <div class="header-info">
             <div class="hf-item">
                 <i class="fa fa-clock-o"></i>
-                <p><span>Kegiatan Sekolah : </span>{{ $school_detail->operational }}</p>
+                <p><span>Kegiatan Sekolah : </span>{{ $school_detail->operational ?? '-' }}</p>
             </div>
 
             <div class="hf-item">
                 <i class="fa fa-map-marker"></i>
-                <p><span>Alamat : </span>{{ $school_detail->address }}</p>
+                <p><span>Alamat : </span>{{ $school_detail->address ?? '-' }}</p>
             </div>
         </div>
     </div>

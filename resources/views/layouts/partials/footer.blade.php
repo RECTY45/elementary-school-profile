@@ -6,7 +6,7 @@
                 <div class="about-widget">
                     <img src="img/logo-light.png" alt>
                     <p>
-                        {{ $school_detail->slogan }}
+                        {{ $school_detail->slogan ?? '-' }}
                     </p>
                     <div class="social pt-1">
                         <a href><i class="fa fa-twitter-square"></i></a>
@@ -40,7 +40,7 @@
                     @foreach($news->take(2) as $data)
                     <li>
                         <p>{{ $data->title }}</p>
-                        <span><i class="fa fa-clock-o"></i>{{ $data->created_at }}</span>
+                        <span><i class="fa fa-clock-o"></i>{{ $data->created_at ?? '-' }}</span>
                     </li>
                     @endforeach
                 </ul>
@@ -50,21 +50,21 @@
                 <h6 class="fw-title">Kontak</h6>
                 <ul class="contact">
                     <li>
-                        <p><i class="fa fa-map-marker"></i> {{ $school_detail->address }} </p>
+                        <p><i class="fa fa-map-marker"></i> {{ $school_detail->address ?? '-' }} </p>
                     </li>
                     <li>
-                        <p><i class="fa fa-phone"></i> {{ $school_detail->phone }} </p>
+                        <p><i class="fa fa-phone"></i> {{ $school_detail->phone ?? '-' }} </p>
                     </li>
                     <li>
                         <p><i class="fa fa-envelope"></i> <a href="ryoogencomunity@gmail.com">
-                            {{ $school_detail->email_school }}
+                            {{ $school_detail->email_school ?? '-' }}
                         </a>
                         </p>
                     </li>
                     <li>
                         <p>
                             <i class="fa fa-clock-o"></i>
-                            {{ $school_detail->operational }} 
+                            {{ $school_detail->operational ?? '-'}}
                         </p>
                     </li>
                 </ul>

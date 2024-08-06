@@ -42,7 +42,7 @@ class LandingPageController extends Controller
     }
 
     public function aboutPage(){
-        $about = Contact::first()->about;
+        $about = Contact::first()->about ?? null;
         $school_detail = Contact::first();
         $news = News::latest()->get();
         return view('about', compact('about', 'school_detail','news'));
